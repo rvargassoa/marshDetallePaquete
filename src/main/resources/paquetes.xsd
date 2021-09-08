@@ -1,0 +1,56 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:tns="http://marsh.com/paqueteDetalle"
+		   targetNamespace="http://marsh.com/paqueteDetalle"
+		   elementFormDefault="qualified">
+    
+    <xs:element name="consultaVehiculoPaquetesRequest">
+		
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="vehiculo" type="tns:Vehiculo" />
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+	
+	<xs:element name="consultaVehiculoPaquetesResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="modelo" type="xs:string" />
+				<xs:element name="clavemarca" type="xs:string" />
+				<xs:element name="descripcion" type="xs:string" />
+				<xs:element name="vehiculoDetalle" type="tns:VehiculoDetalle" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+	
+	<xs:complexType name="Vehiculo">
+		<xs:sequence>
+			<xs:element name="tipovehiculo" type="xs:string" />
+			<xs:element name="modelo" type="xs:string" />
+			<xs:element name="clavemarca" type="xs:string" />
+			<xs:element name="clavesubmarca" type="xs:string" />
+			<xs:element name="clavedescripcion" type="xs:string" />
+			<xs:element name="mail" type="xs:string" />
+			<xs:element name="sexo" type="xs:string" />
+			<xs:element name="telefono" type="xs:string" />
+			<xs:element name="cp" type="xs:string" />
+			<xs:element name="marca" type="xs:string" />
+			<xs:element name="submarca" type="xs:string" />
+			<xs:element name="descripcion" type="xs:string" />
+			<xs:element name="fechanac" type="xs:string" />
+			<xs:element name="edad" type="xs:string" />
+			<xs:element name="iniciovig" type="xs:string" />
+			<xs:element name="finvig" type="xs:string" />
+			<xs:element name="tipoCotizacion" type="xs:string" />
+			<xs:element name="tipoPaquete" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="VehiculoDetalle">
+		<xs:sequence>
+			<xs:element name="clave" type="xs:string" />
+			<xs:element name="deducible" type="xs:string" />
+			<xs:element name="nombre" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

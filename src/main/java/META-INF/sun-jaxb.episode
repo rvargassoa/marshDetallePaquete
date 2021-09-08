@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
+Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2021.09.08 a las 04:34:49 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://marsh.com/paqueteDetalle">
+    <schemaBindings map="false">
+      <package name="com.marsh.paquetedetalle"/>
+    </schemaBindings>
+    <bindings scd="tns:consultaVehiculoPaquetesRequest">
+      <class ref="com.marsh.paquetedetalle.ConsultaVehiculoPaquetesRequest"/>
+    </bindings>
+    <bindings scd="~tns:Vehiculo">
+      <class ref="com.marsh.paquetedetalle.Vehiculo"/>
+    </bindings>
+    <bindings scd="tns:consultaVehiculoPaquetesResponse">
+      <class ref="com.marsh.paquetedetalle.ConsultaVehiculoPaquetesResponse"/>
+    </bindings>
+    <bindings scd="~tns:VehiculoDetalle">
+      <class ref="com.marsh.paquetedetalle.VehiculoDetalle"/>
+    </bindings>
+  </bindings>
+</bindings>
+
