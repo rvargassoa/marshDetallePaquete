@@ -15,10 +15,10 @@
 	<xs:element name="consultaVehiculoPaquetesResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="modelo" type="xs:string" />
-				<xs:element name="clavemarca" type="xs:string" />
-				<xs:element name="descripcion" type="xs:string" />
-				<xs:element name="vehiculoDetalle" type="tns:VehiculoDetalle" maxOccurs="unbounded" />
+				<xs:element name="nombre" type="xs:string" />
+				<xs:element name="primaFinal" type="xs:double" />
+				<xs:element name="cobertura" type="tns:Cobertura" maxOccurs="unbounded" />
+				<xs:element name="adicional" type="tns:Cobertura" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
     </xs:element>
@@ -46,11 +46,12 @@
 		</xs:sequence>
 	</xs:complexType>
 	
-	<xs:complexType name="VehiculoDetalle">
+	<xs:complexType name="Cobertura">
 		<xs:sequence>
 			<xs:element name="clave" type="xs:string" />
 			<xs:element name="deducible" type="xs:string" />
 			<xs:element name="nombre" type="xs:string" />
+			<xs:element name="monto" type="xs:double" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

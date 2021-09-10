@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2021.09.08 a las 04:34:49 PM CDT 
+// Generado el: 2021.09.10 a las 10:44:57 AM CDT 
 //
 
 
@@ -15,18 +15,19 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para VehiculoDetalle complex type.
+ * <p>Clase Java para Cobertura complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="VehiculoDetalle"&gt;
+ * &lt;complexType name="Cobertura"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="clave" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="deducible" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="monto" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,12 +37,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "VehiculoDetalle", propOrder = {
+@XmlType(name = "Cobertura", propOrder = {
     "clave",
     "deducible",
-    "nombre"
+    "nombre",
+    "monto"
 })
-public class VehiculoDetalle {
+public class Cobertura {
 
     @XmlElement(required = true)
     protected String clave;
@@ -49,6 +51,7 @@ public class VehiculoDetalle {
     protected String deducible;
     @XmlElement(required = true)
     protected String nombre;
+    protected double monto;
 
     /**
      * Obtiene el valor de la propiedad clave.
@@ -120,6 +123,22 @@ public class VehiculoDetalle {
      */
     public void setNombre(String value) {
         this.nombre = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad monto.
+     * 
+     */
+    public double getMonto() {
+        return monto;
+    }
+
+    /**
+     * Define el valor de la propiedad monto.
+     * 
+     */
+    public void setMonto(double value) {
+        this.monto = value;
     }
 
 }
