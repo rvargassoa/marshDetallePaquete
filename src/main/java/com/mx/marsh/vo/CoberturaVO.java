@@ -1,12 +1,14 @@
 package com.mx.marsh.vo;
 
-public class VehiculoDetalleVO {
+public class CoberturaVO {
 
 	private String clave;
     
     private String deducible;
     
     private String nombre;
+    
+    private double monto;
 
 	public String getClave() {
 		return clave;
@@ -32,8 +34,17 @@ public class VehiculoDetalleVO {
 		this.nombre = nombre;
 	}
 
+	public double getMonto() {
+		return monto;
+	}
+
+	public void setMonto(double monto) {
+		this.monto = monto;
+	}
+
 	@Override
 	public String toString() {
-		return "VehiculoDetalleVO [clave=" + clave + ", deducible=" + deducible + ", nombre=" + nombre + "]";
+		return "VehiculoDetalleVO [clave=" + clave + ", deducible=" + deducible + ", nombre=" + nombre + ", monto="
+				+ monto + "]";
 	}
 }

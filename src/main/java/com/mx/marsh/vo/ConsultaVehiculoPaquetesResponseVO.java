@@ -2,53 +2,53 @@ package com.mx.marsh.vo;
 
 import java.util.List;
 
-
-
 public class ConsultaVehiculoPaquetesResponseVO {
 
-	private String modelo;
+	private String nombre;
     
-    private String clavemarca;
+    private double primaFinal;
     
-    private String descripcion;
+    private List<CoberturaVO> cobertura;
     
-    private List<VehiculoDetalleVO> vehiculoDetalle;
+    private List<CoberturaVO> adicional;
 
-	public String getModelo() {
-		return modelo;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getClavemarca() {
-		return clavemarca;
+	public double getPrimaFinal() {
+		return primaFinal;
 	}
 
-	public void setClavemarca(String clavemarca) {
-		this.clavemarca = clavemarca;
+	public void setPrimaFinal(double primaFinal) {
+		this.primaFinal = primaFinal;
 	}
 
-	public String getDescripcion() {
-		return descripcion;
+	public List<CoberturaVO> getCobertura() {
+		return cobertura;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setCobertura(List<CoberturaVO> cobertura) {
+		this.cobertura = cobertura;
 	}
 
-	public List<VehiculoDetalleVO> getVehiculoDetalle() {
-		return vehiculoDetalle;
+	public List<CoberturaVO> getAdicional() {
+		return adicional;
 	}
 
-	public void setVehiculoDetalle(List<VehiculoDetalleVO> vehiculoDetalle) {
-		this.vehiculoDetalle = vehiculoDetalle;
+	public void setAdicional(List<CoberturaVO> adicional) {
+		this.adicional = adicional;
 	}
 
 	@Override
 	public String toString() {
-		return "ConsultaVehiculoPaquetesResponseVO [modelo=" + modelo + ", clavemarca=" + clavemarca + ", descripcion="
-				+ descripcion + ", vehiculoDetalle=" + vehiculoDetalle + "]";
+		return "ConsultaVehiculoPaquetesResponseVO [nombre=" + nombre + ", primaFinal=" + primaFinal + ", cobertura="
+				+ cobertura + ", adicional=" + adicional + "]";
 	}
+
+	
 }

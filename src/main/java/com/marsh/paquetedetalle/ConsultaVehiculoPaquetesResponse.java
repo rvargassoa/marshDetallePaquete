@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2021.09.08 a las 04:34:49 PM CDT 
+// Generado el: 2021.09.10 a las 10:44:57 AM CDT 
 //
 
 
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="modelo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="clavemarca" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="descripcion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="vehiculoDetalle" type="{http://marsh.com/paqueteDetalle}VehiculoDetalle" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="primaFinal" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
+ *         &lt;element name="cobertura" type="{http://marsh.com/paqueteDetalle}Cobertura" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="adicional" type="{http://marsh.com/paqueteDetalle}Cobertura" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -41,122 +41,118 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "modelo",
-    "clavemarca",
-    "descripcion",
-    "vehiculoDetalle"
+    "nombre",
+    "primaFinal",
+    "cobertura",
+    "adicional"
 })
 @XmlRootElement(name = "consultaVehiculoPaquetesResponse")
 public class ConsultaVehiculoPaquetesResponse {
 
     @XmlElement(required = true)
-    protected String modelo;
+    protected String nombre;
+    protected double primaFinal;
     @XmlElement(required = true)
-    protected String clavemarca;
+    protected List<Cobertura> cobertura;
     @XmlElement(required = true)
-    protected String descripcion;
-    @XmlElement(required = true)
-    protected List<VehiculoDetalle> vehiculoDetalle;
+    protected List<Cobertura> adicional;
 
     /**
-     * Obtiene el valor de la propiedad modelo.
+     * Obtiene el valor de la propiedad nombre.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getModelo() {
-        return modelo;
+    public String getNombre() {
+        return nombre;
     }
 
     /**
-     * Define el valor de la propiedad modelo.
+     * Define el valor de la propiedad nombre.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setModelo(String value) {
-        this.modelo = value;
+    public void setNombre(String value) {
+        this.nombre = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad clavemarca.
+     * Obtiene el valor de la propiedad primaFinal.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public String getClavemarca() {
-        return clavemarca;
+    public double getPrimaFinal() {
+        return primaFinal;
     }
 
     /**
-     * Define el valor de la propiedad clavemarca.
+     * Define el valor de la propiedad primaFinal.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setClavemarca(String value) {
-        this.clavemarca = value;
+    public void setPrimaFinal(double value) {
+        this.primaFinal = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad descripcion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    /**
-     * Define el valor de la propiedad descripcion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDescripcion(String value) {
-        this.descripcion = value;
-    }
-
-    /**
-     * Gets the value of the vehiculoDetalle property.
+     * Gets the value of the cobertura property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the vehiculoDetalle property.
+     * This is why there is not a <CODE>set</CODE> method for the cobertura property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getVehiculoDetalle().add(newItem);
+     *    getCobertura().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link VehiculoDetalle }
+     * {@link Cobertura }
      * 
      * 
      */
-    public List<VehiculoDetalle> getVehiculoDetalle() {
-        if (vehiculoDetalle == null) {
-            vehiculoDetalle = new ArrayList<VehiculoDetalle>();
+    public List<Cobertura> getCobertura() {
+        if (cobertura == null) {
+            cobertura = new ArrayList<Cobertura>();
         }
-        return this.vehiculoDetalle;
+        return this.cobertura;
+    }
+
+    /**
+     * Gets the value of the adicional property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the adicional property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAdicional().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Cobertura }
+     * 
+     * 
+     */
+    public List<Cobertura> getAdicional() {
+        if (adicional == null) {
+            adicional = new ArrayList<Cobertura>();
+        }
+        return this.adicional;
     }
 
 }

@@ -5,7 +5,7 @@
 Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2021.09.08 a las 04:34:49 PM CDT 
+Generado el: 2021.09.10 a las 10:44:57 AM CDT 
 
   -->
   <bindings scd="x-schema::tns" xmlns:tns="http://marsh.com/paqueteDetalle">
@@ -21,8 +21,8 @@ Generado el: 2021.09.08 a las 04:34:49 PM CDT
     <bindings scd="tns:consultaVehiculoPaquetesResponse">
       <class ref="com.marsh.paquetedetalle.ConsultaVehiculoPaquetesResponse"/>
     </bindings>
-    <bindings scd="~tns:VehiculoDetalle">
-      <class ref="com.marsh.paquetedetalle.VehiculoDetalle"/>
+    <bindings scd="~tns:Cobertura">
+      <class ref="com.marsh.paquetedetalle.Cobertura"/>
     </bindings>
   </bindings>
 </bindings>
